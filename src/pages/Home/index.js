@@ -6,6 +6,7 @@ import './styles.css';
 export default function Home() {
 
   const [filmes, setFilmes] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadFilmes(){
@@ -17,10 +18,18 @@ export default function Home() {
         }
       })
       setFilmes(response.data.results.slice(0, 10))
+      setLoading(false);  // sera apresentado a msg de loading caso a pagina demore a abrir
     }
     loadFilmes();
   }, [])
 
+  if(loading){  // usa a const loading
+    return(
+      <div className="loading">
+        <h2>Carregando Filmes...</h2>
+      </div>
+    )
+  }
 
   return (
     <div className="container">
