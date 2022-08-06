@@ -1,4 +1,4 @@
-import './styles.css';
+import './erro.css';
 
 export default function Erro() {
   return (

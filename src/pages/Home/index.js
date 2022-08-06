@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";  // useState pega os filmes da api, useEffect armazena os filmes
 import api from "../../services/api";
 import { Link } from "react-router-dom";
-import './styles.css';
+import './home.css';
 
 export default function Home() {
 
