@@ -43,7 +43,7 @@ O que você precisa para instalar o software e como instalá-los.
 ```shell
 git clone https://github.com/Felipe-007/Prime.git
 cd prime
-npm
+npm install
 npm start
 http://localhost:3000
 ```
