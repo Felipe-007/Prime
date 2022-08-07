@@ -13,7 +13,6 @@
 Aplicativo criado com ReactJS para explorar os filmes que estão em cartaz. Utilizando a API The Movie DB
 Este projeto permite salvar, listar e excluir os filmes, tais resultados são armazenados no localStorage.
 
-Este projeto se conecta à API oficial do GitHub para obter os dados.
 
 ## ✨ Tecnologias
 
@@ -31,7 +30,7 @@ O que você precisa para instalar o software e como instalá-los.
 
 **Um gerenciador de pacotes JavaScript como NPM ou Yarn** <br>
 [Node.js](https://nodejs.org/en/)
-[Yarn](https://yarnpkg.com/pt-BR/docs/install)
+[Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
 
 **Git instalado em sua máquina (Mac e Linux já tem Git instalado por padrão)** <br>
 [Baixe o Git para seu SO](https://git-scm.com/downloads)
