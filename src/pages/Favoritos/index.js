@@ -11,18 +11,29 @@ export default function Favoritos() {
     setFilmes(JSON.parse(minhaLista) || [])  // coloca em setFilmes json recebido de minhaLista, caso nao tenha nada será feito um array vazio []
   }, [])
 
+  function excluirFilme(id) {
+    let filtroFilmes = filmes.filter( (item) => {
+      return(item.id !== id)  //retornará os itens que forem diferente do ID selecionado, afim de excluir este ID
+    })
+
+    setFilmes(filtroFilmes);
+    localStorage.setItem("@primeflix", JSON.stringify(filtroFilmes))  // salva as alterações no localStorage
+  }
+
   return (
     <div className="meus-filmes">
       <h1>Meus Filmes</h1>
 
+      {filmes.length === 0 && <span>Você não possui nenhum filme selecionado.</span>}
+
       <ul>
         {filmes.map((item) => {
-          return(
+          return (
             <li key={item.id}>
               <span>{item.title}</span>
               <div>
                 <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
-                <button>Excluir</button>
+                <button onClick={() => excluirFilme(item.id)}>Excluir</button>
               </div>
             </li>
           )
